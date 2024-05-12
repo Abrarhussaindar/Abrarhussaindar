@@ -47,3 +47,14 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=abrarhussaindar&show_icons=true&locale=en" alt="abrarhussaindar" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=abrarhussaindar&" alt="abrarhussaindar" /></p>
+
+<div align=center>
+   <a href="https://github.com/abrarhussaindar">
+   <img align="center" alt="Footer" width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/ouput/footer.svg"/>
+   <!-- <img align="center" alt="Footer" width=100% src="img/footer.svg" /> -->
+</div>
+<div align=center>
+   <a href="https://github.com/abrarhussaindar">
+   <img height=50 width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/ouput/divider.gif">
+   </a>
+</div>
