@@ -43,13 +43,6 @@
    </a>
 </div>
 
-
-<div align=center>
-   <a href="https://github.com/abrarhussaindar">
-   <img alt="Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Sabyasachi-Seal&theme=redical&hide_border=true" />
-   </a>
-</div>
-<h2></h2>
 <div align=center>
    <a href="https://github.com/abrarhussaindar" target="_blank">
    <img align=center width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/main/3DGraphs/profile-night-rainbow.svg" />
