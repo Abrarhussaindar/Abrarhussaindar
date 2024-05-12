@@ -1,12 +1,12 @@
 <!--Made By Abrar Hussain-->
 <div align="center" >
    <a href="https://github.com/abrarhussaindar">
-   <img width=100% src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.google%2Fproducts%2Fchrome%2Fchrome-dino%2F&psig=AOvVaw1wfVF5Ls85315Twhhpp6dX&ust=1715597239722000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLiSkvL3h4YDFQAAAAAdAAAAABAE" href="https://github.com/abrarhussaindar" />
+   <img width=100% src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Dino_non-birthday_version.gif" href="https://github.com/abrarhussaindar" />
    </a>
 </div>
 <div align=center>
    <a href="https://github.com/abrarhussaindar">
-   <img height=50 width=100% src="https://raw.githubusercontent.com/abrarhussaindar/abrarhussaindar/ouput/divider.gif">
+   <img height=50 width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/ouput/divider.gif">
    </a>
 </div>
 <h1 align="center"><a href="https://github.com/abrarhussaindar"><img width=7% height=15% src="https://raw.githubusercontent.com/abrarhussaindar/abrarhussaindar/ouput/Hi.gif"/></a> I'm a
