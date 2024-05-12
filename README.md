@@ -47,7 +47,27 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=abrarhussaindar&show_icons=true&locale=en" alt="abrarhussaindar" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=abrarhussaindar&" alt="abrarhussaindar" /></p>
-
+<div align=center>
+   <a href="https://github.com/abrarhussaindar">
+   <img height=50 width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/ouput/divider.gif">
+   </a>
+</div>
+<div align=center>
+   <a href="https://github.com/abrarhussaindar">
+   <img alt="Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Sabyasachi-Seal&theme=redical&hide_border=true" />
+   </a>
+</div>
+<h2></h2>
+<div align=center>
+   <a href="https://github.com/abrarhussaindar" target="_blank">
+   <img align=center width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/main/3DGraphs/profile-night-rainbow.svg" />
+   </a>
+</div>
+<div align=center>
+   <a href="https://github.com/abrarhussaindar">
+   <img height=50 width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/ouput/divider.gif">
+   </a>
+</div>
 <div align=center>
    <a href="https://github.com/abrarhussaindar">
    <img align="center" alt="Footer" width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/ouput/footer.svg"/>
