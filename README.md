@@ -1,6 +1,6 @@
 
 <h1 align="center">Hi 👋, I'm Abrar Hussain</h1>
-<h3 align="center">A Passionate FullStack Developer From India</h3>
+<h3 align="center">A Passionate FullStack Developer From Kashmir</h3>
 <div align=center>
    <a href="https://github.com/abrarhussaindar">
    <img height=50 width=100% src="https://raw.githubusercontent.com/Sabyasachi-Seal/Sabyasachi-Seal/ouput/divider.gif">
