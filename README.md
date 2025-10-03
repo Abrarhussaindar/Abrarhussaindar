@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Abrar Hussain Dar
 
-🚀 **FullStack Developer \| SaaS Builder \| Cloud Enthusiast**
+🚀 **FullStack Developer \| SaaS Builder \**
 
 I specialize in building scalable web applications, SaaS products, and
 robust backends. With expertise in **Node.js, Next.js, TypeScript, and
