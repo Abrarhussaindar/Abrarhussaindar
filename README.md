@@ -1,720 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrar Hussain Dar - FullStack Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(50px, -50px); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: slideDown 0.8s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-            color: #a8b2d1;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            color: #8892b0;
-            line-height: 1.8;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .social-links a:hover {
-            background: rgba(102, 126, 234, 0.2);
-            border-color: #667eea;
-            transform: translateY(-3px);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-
-        /* Experience Cards */
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .experience-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(102, 126, 234, 0.5);
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
-        }
-
-        .experience-card h3 {
-            color: #667eea;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-card .company {
-            color: #a8b2d1;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-card .date {
-            color: #8892b0;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .experience-card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .experience-card ul li {
-            padding-left: 1.5rem;
-            margin-bottom: 0.8rem;
-            position: relative;
-            color: #ccd6f6;
-        }
-
-        .experience-card ul li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-size: 1.2rem;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(102, 126, 234, 0.5);
-            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.3);
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-
-        .project-icon {
-            font-size: 2rem;
-        }
-
-        .project-card h3 {
-            color: #ccd6f6;
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-card .tag {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            background: rgba(102, 126, 234, 0.2);
-            border-radius: 20px;
-            font-size: 0.75rem;
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            color: #8892b0;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-stack span {
-            padding: 0.4rem 0.8rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 5px;
-            font-size: 0.85rem;
-            color: #a8b2d1;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #667eea;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: #764ba2;
-            transform: translateX(5px);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-category {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            border-color: rgba(102, 126, 234, 0.5);
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
-        }
-
-        .skill-category h3 {
-            color: #667eea;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .skill-tags span {
-            padding: 0.6rem 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            color: #ccd6f6;
-            transition: all 0.3s ease;
-        }
-
-        .skill-tags span:hover {
-            background: rgba(102, 126, 234, 0.2);
-            border-color: #667eea;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem 0;
-            background: rgba(0, 0, 0, 0.3);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        footer p {
-            color: #8892b0;
-            font-size: 1rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.3rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Abrar Hussain Dar</h1>
-            <h2>FullStack Developer | SaaS Builder | Cloud Enthusiast</h2>
-            <p>Crafting scalable web applications, innovative SaaS platforms, and robust backends with expertise in Node.js, Next.js, TypeScript, and PostgreSQL. Building solutions that scale, perform, and create lasting impact.</p>
-            
-            <div class="social-links">
-                <a href="mailto:abrardar988651@gmail.com">📧 Email</a>
-                <a href="https://linkedin.com/in/abrarhussain0366" target="_blank">💼 LinkedIn</a>
-                <a href="https://github.com/Abrarhussaindar" target="_blank">💻 GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">💼 Professional Journey</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Backend Developer</h3>
-                    <p class="company">Navrekh Technologies Pvt. Ltd.</p>
-                    <p class="date">April 2024 – July 2025</p>
-                    <ul>
-                        <li>Architected and maintained high-performance backend services and RESTful APIs using Node.js</li>
-                        <li>Optimized SQL & NoSQL database operations, ensuring scalability and enhanced performance</li>
-                        <li>Implemented robust authentication and authorization mechanisms for enterprise applications</li>
-                    </ul>
-                </div>
-
-                <div class="experience-card">
-                    <h3>Full Stack Developer</h3>
-                    <p class="company">Daisy Online Media and Gaming Pvt. Ltd.</p>
-                    <p class="date">February 2023 – December 2023</p>
-                    <ul>
-                        <li>Developed full-stack applications with modern JavaScript frameworks and Node.js backend</li>
-                        <li>Designed and implemented RESTful APIs for seamless client-server data exchange</li>
-                        <li>Collaborated with cross-functional teams to deliver production-ready applications</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">🚀 Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">💼</div>
-                    </div>
-                    <h3>BillMatrix</h3>
-                    <span class="tag">SaaS Platform</span>
-                    <p>Comprehensive billing automation platform with invoicing, subscriptions, payment processing, and analytics dashboards. Features role-based access control and real-time revenue tracking.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                        <span>TailwindCSS</span>
-                        <span>Shadcn/ui</span>
-                    </div>
-                    <a href="https://billmatrix.in" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🏥</div>
-                    </div>
-                    <h3>Tabeeb Medical Solutions</h3>
-                    <span class="tag">Healthcare SaaS</span>
-                    <p>Modern healthcare platform integrating Razorpay payments, real-time video consultations, and digital prescription management for seamless patient care.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                        <span>Razorpay</span>
-                        <span>WebRTC</span>
-                    </div>
-                    <a href="https://tabeeb.co.in" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">⚽</div>
-                    </div>
-                    <h3>YourSportz</h3>
-                    <span class="tag">Real-time App</span>
-                    <p>Live football scoring application with real-time updates using Socket.io for instant score broadcasting and match statistics.</p>
-                    <div class="tech-stack">
-                        <span>Node.js</span>
-                        <span>Socket.io</span>
-                        <span>React</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <a href="https://yoursportz.in" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">📊</div>
-                    </div>
-                    <h3>EcomMatrix</h3>
-                    <span class="tag">Analytics Dashboard</span>
-                    <p>Smart e-commerce analytics dashboard providing insights to track sales, customer behavior, and optimize online store performance.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                        <span>Chart.js</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">📄</div>
-                    </div>
-                    <h3>ResumeMatrix</h3>
-                    <span class="tag">AI-Powered Tool</span>
-                    <p>AI-powered resume builder creating ATS-optimized resumes that boost interview callbacks by 300%. Features intelligent formatting and keyword optimization.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>OpenAI</span>
-                        <span>PostgreSQL</span>
-                        <span>TailwindCSS</span>
-                    </div>
-                    <a href="https://resumematrix.devmatrix.org/" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🏠</div>
-                    </div>
-                    <h3>ReHome</h3>
-                    <span class="tag">Marketplace</span>
-                    <p>Sustainable marketplace platform for buying and selling affordable pre-loved items, promoting circular economy and environmental consciousness.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Stripe</span>
-                    </div>
-                    <a href="https://rehome.devmatrix.org/" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🛍️</div>
-                    </div>
-                    <h3>ShopMatrix</h3>
-                    <span class="tag">E-commerce</span>
-                    <p>Modern e-commerce platform delivering premium shopping experience with secure checkout, inventory management, and order tracking.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                        <span>Stripe</span>
-                    </div>
-                    <a href="https://shopmatrix.devmatrix.org/" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">📚</div>
-                    </div>
-                    <h3>Brilliance Academy</h3>
-                    <span class="tag">EdTech Platform</span>
-                    <p>Smart coaching platform for classes 7-10 with comprehensive curriculum coverage, expert faculty, and interactive learning modules.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                        <span>AWS</span>
-                    </div>
-                    <a href="https://brillianceacademy.devmatrix.org/" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🧵</div>
-                    </div>
-                    <h3>Al-Nisa</h3>
-                    <span class="tag">E-commerce</span>
-                    <p>Premium knitting fabrics e-commerce platform blending traditional Kashmiri artistry with contemporary fashion for luxury textiles.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Razorpay</span>
-                    </div>
-                    <a href="https://alnisa.devmatrix.org/" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🎨</div>
-                    </div>
-                    <h3>Royal Paper Mache</h3>
-                    <span class="tag">Cultural Heritage</span>
-                    <p>Digital showcase for traditional Kashmiri paper mache crafts, bringing centuries-old artistry to modern e-commerce.</p>
-                    <div class="tech-stack">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Stripe</span>
-                    </div>
-                    <a href="https://royalpapermache.in/" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">💧</div>
-                    </div>
-                    <h3>Home Basics</h3>
-                    <span class="tag">Service Platform</span>
-                    <p>Trusted water purification and water heater installation services platform with booking system and service tracking.</p>
-                    <div class="tech-stack">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <a href="https://homebasics.onrender.com/" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">✈️</div>
-                    </div>
-                    <h3>M.M Tour and Travels</h3>
-                    <span class="tag">Tourism</span>
-                    <p>Comprehensive travel platform offering custom tour packages, expert guides, and 24/7 support for memorable journeys.</p>
-                    <div class="tech-stack">
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <a href="https://mmtourandtravels.in/" target="_blank" class="project-link">View Live →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🏔️</div>
-                    </div>
-                    <h3>One Call Kashmir</h3>
-                    <span class="tag">Tourism Agency</span>
-                    <p>Premier Kashmir tourism platform providing seamless tour bookings, shikara rides, and adventure experiences in the valley.</p>
-                    <div class="tech-stack">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <a href="https://onecallkashmir.com/" target="_blank" class="project-link">View Live →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">🛠️ Technical Arsenal</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages & Frameworks</h3>
-                    <div class="skill-tags">
-                        <span>TypeScript</span>
-                        <span>JavaScript</span>
-                        <span>Node.js</span>
-                        <span>Next.js</span>
-                        <span>React.js</span>
-                        <span>Python</span>
-                        <span>Django</span>
-                        <span>FastAPI</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Databases & Cloud</h3>
-                    <div class="skill-tags">
-                        <span>PostgreSQL</span>
-                        <span>MongoDB</span>
-                        <span>Redis</span>
-                        <span>Azure</span>
-                        <span>AWS</span>
-                        <span>Render</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-tags">
-                        <span>Git/GitHub</span>
-                        <span>Docker</span>
-                        <span>Postman</span>
-                        <span>Shadcn/ui</span>
-                        <span>TailwindCSS</span>
-                        <span>Linux</span>
-                        <span>Socket.io</span>
-                        <span>REST APIs</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>✨ Built with passion by Abrar Hussain Dar • Building solutions that scale, perform, and create impact</p>
-            <p style="margin-top: 1rem; color: #667eea;">💡 Open to collaborations and exciting opportunities</p>
-        </div>
-    </footer>
-</body>
-</html>
+# 👋 Hi, I'm Abrar Hussain Dar
+
+<div align="center">
+  
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=667EEA&center=true&vCenter=true&width=600&lines=FullStack+Developer;SaaS+Builder;Cloud+Enthusiast;Building+Scalable+Solutions)](https://git.io/typing-svg)
+
+</div>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=abrarhussaindar&label=Profile%20views&color=667eea&style=flat" alt="profile views" />
+  <img src="https://img.shields.io/github/followers/abrarhussaindar?label=Followers&style=social" alt="followers" />
+</p>
+
+---
+
+## 🚀 About Me
+
+I specialize in building **scalable web applications, SaaS platforms, and robust backends**.  
+With expertise in **Node.js, Next.js, TypeScript, and PostgreSQL**, I craft end-to-end solutions that deliver **performance, impact, and reliability**.
+
+- 🔭 Currently working on **innovative SaaS platforms**
+- 🌱 Exploring **Cloud Architecture & Microservices**
+- 💡 Passionate about **scalable systems and clean code**
+- 🎯 Building solutions that **scale, perform, and create impact**
+- 📍 Based in **Srinagar, Jammu and Kashmir, India**
+
+---
+
+## 🔗 Connect With Me
+
+<p align="center">
+  <a href="mailto:abrardar988651@gmail.com">
+    <img src="https://img.shields.io/badge/Email-abrardar988651%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+  <a href="https://linkedin.com/in/abrarhussain0366">
+    <img src="https://img.shields.io/badge/LinkedIn-abrarhussain0366-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://github.com/Abrarhussaindar">
+    <img src="https://img.shields.io/badge/GitHub-Abrarhussaindar-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</p>
+
+---
+
+## 💼 Professional Experience
+
+### 🔹 Backend Developer — **Navrekh Technologies Pvt. Ltd.** 
+*April 2024 – July 2025*
+
+- Architected and maintained **high-performance backend services and RESTful APIs** using Node.js
+- Optimized **SQL & NoSQL database** operations, ensuring scalability and enhanced performance
+- Implemented robust **authentication and authorization** mechanisms for enterprise applications
+
+### 🔹 Full Stack Developer — **Daisy Online Media and Gaming Pvt. Ltd.**
+*February 2023 – December 2023*
+
+- Developed **full-stack applications** with modern JavaScript frameworks and Node.js backend
+- Designed and implemented **RESTful APIs** for seamless client-server data exchange
+- Collaborated with cross-functional teams to deliver **production-ready applications**
+
+---
+
+## 🎓 Education
+
+**B.Tech in Computer Science & Engineering**  
+*Presidency University, Bengaluru* | 2019 – 2023
+
+**Higher Secondary (Medical & Non-Medical)**  
+*Sri Pratap Higher Secondary School, Srinagar* | 2016 – 2017
+
+---
+
+## 🚀 Featured Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">💼 BillMatrix</h3>
+      <p align="center">
+        <a href="https://billmatrix.in" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>SaaS Billing Platform</strong></p>
+      <p>Comprehensive billing automation with invoicing, subscriptions, payments, and analytics dashboards. Features role-based access control and real-time revenue tracking.</p>
+      <p><strong>Tech Stack:</strong> Next.js • Node.js • PostgreSQL • TailwindCSS • Shadcn/ui</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">🏥 Tabeeb Medical Solutions</h3>
+      <p align="center">
+        <a href="https://tabeeb.co.in" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>Healthcare SaaS Platform</strong></p>
+      <p>Modern healthcare platform with Razorpay integration, real-time video consultations, and digital prescription management.</p>
+      <p><strong>Tech Stack:</strong> Next.js • Node.js • PostgreSQL • Razorpay • WebRTC</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">⚽ YourSportz</h3>
+      <p align="center">
+        <a href="https://yoursportz.in" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>Real-time Football Scoring</strong></p>
+      <p>Live football scoring application with real-time updates using Socket.io for instant score broadcasting and match statistics.</p>
+      <p><strong>Tech Stack:</strong> Node.js • Socket.io • React • MongoDB</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">📊 EcomMatrix</h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Status-Development-yellow?style=for-the-badge" alt="Status"/>
+      </p>
+      <p><strong>E-commerce Analytics</strong></p>
+      <p>Smart analytics dashboard providing insights to track sales, customer behavior, and optimize online store performance.</p>
+      <p><strong>Tech Stack:</strong> Next.js • Node.js • PostgreSQL • Chart.js</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">📄 ResumeMatrix</h3>
+      <p align="center">
+        <a href="https://resumematrix.devmatrix.org/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>AI Resume Builder</strong></p>
+      <p>AI-powered resume builder creating ATS-optimized resumes that boost interview callbacks by 300%.</p>
+      <p><strong>Tech Stack:</strong> Next.js • OpenAI • PostgreSQL • TailwindCSS</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">🏠 ReHome</h3>
+      <p align="center">
+        <a href="https://rehome.devmatrix.org/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>Second-Hand Marketplace</strong></p>
+      <p>Sustainable marketplace for buying and selling affordable pre-loved items, promoting circular economy.</p>
+      <p><strong>Tech Stack:</strong> Next.js • Node.js • MongoDB • Stripe</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">🛍️ ShopMatrix</h3>
+      <p align="center">
+        <a href="https://shopmatrix.devmatrix.org/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>E-commerce Platform</strong></p>
+      <p>Modern e-commerce platform with secure checkout, inventory management, and order tracking.</p>
+      <p><strong>Tech Stack:</strong> Next.js • Node.js • PostgreSQL • Stripe</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">📚 Brilliance Academy</h3>
+      <p align="center">
+        <a href="https://brillianceacademy.devmatrix.org/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>EdTech Platform</strong></p>
+      <p>Smart coaching platform for classes 7-10 with comprehensive curriculum and interactive learning.</p>
+      <p><strong>Tech Stack:</strong> Next.js • Node.js • PostgreSQL • AWS</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">🧵 Al-Nisa</h3>
+      <p align="center">
+        <a href="https://alnisa.devmatrix.org/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>Premium Fabrics E-commerce</strong></p>
+      <p>Luxury knitting fabrics platform blending Kashmiri artistry with contemporary fashion.</p>
+      <p><strong>Tech Stack:</strong> Next.js • Node.js • MongoDB • Razorpay</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">🎨 Royal Paper Mache</h3>
+      <p align="center">
+        <a href="https://royalpapermache.in/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>Cultural Heritage Platform</strong></p>
+      <p>Digital showcase for traditional Kashmiri paper mache crafts and e-commerce.</p>
+      <p><strong>Tech Stack:</strong> React • Node.js • MongoDB • Stripe</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">💧 Home Basics</h3>
+      <p align="center">
+        <a href="https://homebasics.onrender.com/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>Service Platform</strong></p>
+      <p>Water purification and heater installation services with booking and tracking system.</p>
+      <p><strong>Tech Stack:</strong> React • Node.js • MongoDB</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">✈️ M.M Tour and Travels</h3>
+      <p align="center">
+        <a href="https://mmtourandtravels.in/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>Travel & Tourism</strong></p>
+      <p>Comprehensive travel platform with custom packages, expert guides, and 24/7 support.</p>
+      <p><strong>Tech Stack:</strong> Next.js • Node.js • PostgreSQL</p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">🏔️ One Call Kashmir</h3>
+      <p align="center">
+        <a href="https://onecallkashmir.com/" target="_blank">
+          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
+        </a>
+      </p>
+      <p><strong>Tourism Agency</strong></p>
+      <p>Premier Kashmir tourism platform with tours, shikara rides, and adventure experiences.</p>
+      <p><strong>Tech Stack:</strong> React • Node.js • MongoDB</p>
+    </td>
+    <td width="50%" valign="top">
+      <!-- Empty cell for alignment -->
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Technical Skills
+
+<div align="center">
+
+### Languages & Frameworks
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+
+### Databases & Cloud
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+### Tools & Technologies
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white)
+
+</div>
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+  
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=abrarhussaindar&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abrarhussaindar&layout=compact&langs_count=8&theme=tokyonight"/>
+
+</div>
+
+<div align="center">
+  
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=abrarhussaindar&theme=tokyonight)](https://git.io/streak-stats)
+
+</div>
+
+---
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+  
+[![trophy](https://github-profile-trophy.vercel.app/?username=abrarhussaindar&theme=tokyonight&no-frame=true&row=1&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+---
+
+## 📈 Contribution Graph
+
+<div align="center">
+  
+[![Abrar's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=abrarhussaindar&theme=tokyo-night)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+</div>
+
+---
+
+## 💭 Random Dev Quote
+
+<div align="center">
+
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
+
+</div>
+
+---
+
+## 🌟 Let's Collaborate
+
+💡 Passionate about **SaaS platforms, scalable backends, and full-stack applications**  
+✅ Open to **collaborations and exciting opportunities**  
+🚀 Always learning and building **impactful solutions**
+
+<div align="center">
+
+### ✨ *"Building solutions that scale, perform, and create impact"* ✨
+
+**Thanks for visiting! Feel free to reach out!** 😊
+
+</div>
+
+---
+
+<div align="center">
+  
+![Snake animation](https://raw.githubusercontent.com/abrarhussaindar/abrarhussaindar/output/github-contribution-grid-snake-dark.svg)
+
+</div>
