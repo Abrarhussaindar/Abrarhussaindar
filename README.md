@@ -1,112 +1,103 @@
-# 👋 Hi, I'm Abrar Hussain Dar
 
-🚀 **FullStack Developer \| SaaS Builder \**
+# 👋 Hi, I'm Abrar Hussain Dar  
 
-I specialize in building scalable web applications, SaaS products, and
-robust backends. With expertise in **Node.js, Next.js, TypeScript, and
-PostgreSQL**, I design and develop end-to-end solutions that deliver
-impact.
+🚀 **FullStack Developer | SaaS Builder | Cloud Enthusiast**  
 
-------------------------------------------------------------------------
+I specialize in building **scalable web applications, SaaS platforms, and robust backends**.  
+With expertise in **Node.js, Next.js, TypeScript, and PostgreSQL**, I craft end-to-end solutions that deliver **performance, impact, and reliability**.  
 
-## 🔗 Connect With Me
+---
 
--   📧 Email: <abrardar988651@gmail.com>\
--   💼 LinkedIn:
-    [linkedin.com/in/abrarhussain0366](https://linkedin.com/in/abrarhussain0366)\
--   🖥️ Portfolio/Projects:
-    [github.com/Abrarhussaindar](https://github.com/Abrarhussaindar)
+## 🔗 Connect With Me  
 
-------------------------------------------------------------------------
+[![Email](https://img.shields.io/badge/Email-abrardar988651%40gmail.com-red?style=flat&logo=gmail)](mailto:abrardar988651@gmail.com)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://linkedin.com/in/abrarhussain0366)  
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/Abrarhussaindar)  
 
-## 💼 Professional Experience
+---
 
-### Backend Developer --- Navrekh Technologies Pvt. Ltd. *(04/2024 -- 07/2025)*
+## 💼 Professional Experience  
 
--   Developed and maintained high-performance, scalable backend services
-    and APIs using **Node.js**.\
--   Designed, implemented, and maintained **SQL & NoSQL databases**,
-    ensuring optimized performance and data integrity.
+### Backend Developer — Navrekh Technologies Pvt. Ltd. *(04/2024 – 07/2025)*  
+- Designed and maintained **high-performance backend services and APIs** in Node.js.  
+- Worked with **SQL & NoSQL databases**, ensuring scalability and optimized performance.  
 
-### Full Stack Developer --- Daisy Online Media and Gaming Pvt. Ltd. *(02/2023 -- 12/2023)*
+### Full Stack Developer — Daisy Online Media and Gaming Pvt. Ltd. *(02/2023 – 12/2023)*  
+- Built **full-stack applications** using HTML, CSS, JS frameworks, and Node.js backend.  
+- Developed **APIs and server-side logic** for efficient data exchange.  
 
--   Built seamless integrations using **HTML, CSS, JavaScript
-    frameworks**, and backend services.\
--   Designed APIs and server-side logic for **efficient and reliable
-    data exchange**.
+---
 
-------------------------------------------------------------------------
+## 🎓 Education  
 
-## 🎓 Education
+- **B.Tech in Computer Science & Engineering** — Presidency University, Bengaluru *(2019 – 2023)*  
+- **Higher Secondary (Medical & Non-Medical)** — Sri Pratap Higher Secondary School, Srinagar *(2016 – 2017)*  
 
--   **B.Tech in Computer Science and Engineering** --- Presidency
-    University, Bengaluru *(2019 -- 2023)*\
--   **Higher Secondary Education (Medical & Non-Medical)** --- Sri
-    Pratap Higher Secondary School, Srinagar *(2016 -- 2017)*
+---
 
-------------------------------------------------------------------------
+## 🚀 Featured Projects  
 
-## 🚀 Featured Projects
+### 🔹 [BillMatrix](https://billmatrix.in) — *Billing Automation | SaaS Platform*  
+- Built a **SaaS billing platform** with invoicing, subscriptions, payments, and analytics dashboards.  
+- Role-based dashboards for invoices, revenue, and outstanding payments.  
+- **Tech:** Next.js, Node.js, PostgreSQL, TailwindCSS, Shadcn/ui  
 
-### 🔹 [BillMatrix](https://billmatrix.in) --- *Billing Automation \| SaaS Platform*
+### 🔹 [Tabeeb Medical Solutions](https://tabeeb.co.in) — *Healthcare Made Simple*  
+- Healthcare SaaS platform with **Razorpay integration, real-time video consultations, and digital prescriptions**.  
+- **Tech:** Next.js, Node.js, PostgreSQL, Razorpay, TailwindCSS  
 
--   Built a **SaaS billing platform** using **Next.js, Node.js, and
-    PostgreSQL**.\
--   Integrated **invoicing, subscriptions, payments, and analytics
-    dashboards**.\
--   Designed role-based dashboards and revenue visualization modules.
+### 🔹 [YourSportz](https://yoursportz.in) — *Local Football Arena*  
+- Real-time football scoring app using **Node.js & Socket.io**.  
 
-### 🔹 [Tabeeb Medical Solutions](https://tabeeb.co.in) --- *Healthcare Made Simple*
+### 🔹 [EcomMatrix](#) — *Smart E-commerce Dashboard*  
+- Analytics dashboard to **track and optimize online store performance**.  
+- **Tech:** Next.js, Node.js, PostgreSQL, TailwindCSS  
 
--   Developed a **healthcare SaaS platform** with **Next.js, Node.js,
-    PostgreSQL, and Razorpay integration**.\
--   Enabled **doctor-patient consultations via video calls** and
-    **digital prescriptions**.
+### 🔹 [ResumeMatrix](https://resumematrix.devmatrix.org/) — *AI Resume Builder*  
+- AI-powered resume builder with **ATS-optimized resumes**.  
+- Boosts **interview callbacks by 300%**.  
 
-### 🔹 [YourSportz](https://yoursportz.in) --- *Local Football Arena*
+### 🔹 [ReHome](https://rehome.devmatrix.org/) — *Second-Hand Marketplace*  
+- Sustainable platform for **affordable pre-loved items**.  
 
--   Built backend services for a **real-time football scoring app**
-    using **Node.js & Socket.io**.
+### 🔹 [ShopMatrix](https://shopmatrix.devmatrix.org/) — *E-commerce Store*  
+- Modern **e-commerce experience** with premium products and secure checkout.  
 
-### 🔹 [EcomMatrix](#) --- *Smart E-commerce Dashboard*
+### 🔹 [Brilliance Academy](https://brillianceacademy.devmatrix.org/) — *Education Platform*  
+- Smart coaching platform for classes 7–10 with **comprehensive coverage & expert faculty**.  
 
--   A powerful **analytics dashboard** for online stores with **Next.js
-    & PostgreSQL**.
+### 🔹 [Al-Nisa](https://alnisa.devmatrix.org/) — *Premium Knitting Fabrics*  
+- Blending **Kashmiri artistry with contemporary fashion** for premium fabrics & garments.  
 
-### 🔹 [ResumeMatrix](https://resumematrix.devmatrix.org/) --- *AI Resume Builder*
+### 🔹 [Royal Paper Mache](https://royalpapermache.in/) — *Traditional Art Modernized*  
+- Digital presence for **traditional Kashmiri paper mache crafts**.  
 
--   Built an **AI-powered resume builder** that delivers **ATS-optimized
-    resumes** with a **300% higher callback rate**.
+### 🔹 [Home Basics](https://homebasics.onrender.com/) — *Water Purification Services*  
+- **Trusted solutions for water purification & water heater installation.**  
 
-------------------------------------------------------------------------
+### 🔹 [M.M Tour and Travels](https://mmtourandtravels.in/) — *Travel & Tourism*  
+- **Custom tour packages, expert guides, and 24/7 support**.  
 
-## 🛠️ Skills
+### 🔹 [One Call Kashmir](https://onecallkashmir.com/) — *Tourism Agency*  
+- Seamless tours, shikara rides, and adventure experiences in Kashmir.  
 
-**Languages & Frameworks:**\
-- TypeScript \| JavaScript \| Node.js \| Next.js \| React.js \| Python
-\| Django \| FastAPI
+---
 
-**Databases & Cloud:**\
-- PostgreSQL \| MongoDB \| Azure \| Render
+## 🛠️ Skills  
 
-**Tools & Others:**\
-- Git/GitHub \| Postman \| Shadcn/ui \| TailwindCSS \| Linux
+**Languages & Frameworks:**  
+TypeScript | JavaScript | Node.js | Next.js | React.js | Python | Django | FastAPI  
 
-------------------------------------------------------------------------
+**Databases & Cloud:**  
+PostgreSQL | MongoDB | Azure | Render  
 
-## 📊 GitHub Stats
+**Tools & Others:**  
+Git/GitHub | Postman | Shadcn/ui | TailwindCSS | Linux  
 
-![Abrar's GitHub
-stats](https://github-readme-stats.vercel.app/api?username=Abrarhussaindar&show_icons=true&theme=radical)
 
-![Top
-Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Abrarhussaindar&layout=compact&theme=radical)
+## 🌐 Let's Collaborate  
 
-------------------------------------------------------------------------
+💡 Passionate about **SaaS platforms, scalable backends, and full-stack apps**.  
+✅ Open to collaborations and exciting opportunities.  
 
-## 🌐 Let's Collaborate
-
-I'm passionate about **SaaS platforms, scalable backends, and full-stack
-apps**. Open to collaborations and exciting opportunities.
-
-✨ *"Building solutions that scale, perform, and create impact."*
+✨ *“Building solutions that scale, perform, and create impact.”*  
