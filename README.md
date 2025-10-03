@@ -274,53 +274,6 @@ With expertise in **Node.js, Next.js, TypeScript, and PostgreSQL**, I craft end-
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-  
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=abrarhussaindar&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abrarhussaindar&layout=compact&langs_count=8&theme=tokyonight"/>
-
-</div>
-
-<div align="center">
-  
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=abrarhussaindar&theme=tokyonight)](https://git.io/streak-stats)
-
-</div>
-
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-  
-[![trophy](https://github-profile-trophy.vercel.app/?username=abrarhussaindar&theme=tokyonight&no-frame=true&row=1&column=7)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
----
-
-## 📈 Contribution Graph
-
-<div align="center">
-  
-[![Abrar's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=abrarhussaindar&theme=tokyo-night)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
----
-
-## 💭 Random Dev Quote
-
-<div align="center">
-
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
-
-</div>
-
----
-
 ## 🌟 Let's Collaborate
 
 💡 Passionate about **SaaS platforms, scalable backends, and full-stack applications**  
@@ -332,13 +285,5 @@ With expertise in **Node.js, Next.js, TypeScript, and PostgreSQL**, I craft end-
 ### ✨ *"Building solutions that scale, perform, and create impact"* ✨
 
 **Thanks for visiting! Feel free to reach out!** 😊
-
-</div>
-
----
-
-<div align="center">
-  
-![Snake animation](https://raw.githubusercontent.com/abrarhussaindar/abrarhussaindar/output/github-contribution-grid-snake-dark.svg)
 
 </div>
