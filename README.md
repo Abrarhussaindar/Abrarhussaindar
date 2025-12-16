@@ -183,7 +183,6 @@ With expertise in **Node.js, Next.js, TypeScript, and PostgreSQL**, I craft end-
       <p>Digital showcase for traditional Kashmiri paper mache crafts and e-commerce.</p>
       <p><strong>Tech Stack:</strong> React • Node.js • MongoDB • Stripe</p>
     </td>
-
      <td width="50%" valign="top">
       <h3 align="center">🏔️ One Call Kashmir</h3>
       <p align="center">
