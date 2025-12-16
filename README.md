@@ -173,17 +173,6 @@ With expertise in **Node.js, Next.js, TypeScript, and PostgreSQL**, I craft end-
   
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🧵 Al-Nisa</h3>
-      <p align="center">
-        <a href="https://alnisa.devmatrix.org/" target="_blank">
-          <img src="https://img.shields.io/badge/Live-Site-success?style=for-the-badge" alt="Live Site"/>
-        </a>
-      </p>
-      <p><strong>Premium Fabrics E-commerce</strong></p>
-      <p>Luxury knitting fabrics platform blending Kashmiri artistry with contemporary fashion.</p>
-      <p><strong>Tech Stack:</strong> Next.js • Node.js • MongoDB • Razorpay</p>
-    </td>
-    <td width="50%" valign="top">
       <h3 align="center">🎨 Royal Paper Mache</h3>
       <p align="center">
         <a href="https://royalpapermache.in/" target="_blank">
