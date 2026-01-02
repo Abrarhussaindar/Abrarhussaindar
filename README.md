@@ -44,6 +44,13 @@ With expertise in **Node.js, Next.js, TypeScript, and PostgreSQL**, I craft end-
 
 ## 💼 Professional Experience
 
+### 🔹 Full Stack Developer — **Rehbar Post**
+*December 2025 – Present | Srinagar, India*
+
+- Expert in building **scalable web applications** using Next.js and React with focus on performance and clean architecture
+- Proficient in **Node.js backend development**, including APIs, databases, authentication, and core business logic
+- Delivering **full-stack solutions** with modern best practices and industry standards
+
 ### 🔹 Backend Developer — **Navrekh Technologies Pvt. Ltd.** 
 *April 2024 – July 2025*
 
