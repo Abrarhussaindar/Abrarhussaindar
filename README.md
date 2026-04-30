@@ -44,6 +44,13 @@ With expertise in **Node.js, Next.js, TypeScript, and PostgreSQL**, I craft end-
 
 ## 💼 Professional Experience
 
+### 🔹 Full Stack Developer (Part-time) — **Altabeeb Healthcare PVT LTD**
+*May 2025 – current*
+
+- Expert in building **scalable web applications** using Next.js and React with focus on performance and clean architecture
+- Proficient in **Node.js backend development**, including APIs, databases, authentication, and core business logic
+- Delivering **full-stack solutions** with modern best practices and industry standards
+
 ### 🔹 Full Stack Developer — **Rehbar Post**
 *December 2025 – April 2026*
 
